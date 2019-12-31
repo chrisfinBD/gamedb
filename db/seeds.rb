@@ -5,3 +5,28 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+#
+
+
+# Need title, release date, rating, console, created_at random ish time
+# Placeholder image from internet https://videogamelaw.sites.olt.ubc.ca/files/2014/08/icon_12678.png
+require 'faker'
+
+ratings = %w(Everyone Teen Mature Adult)
+10.times do |number|
+# Make a game
+title = Faker::Game.title
+rel_date = Faker::Date.between(from: 50.years.ago, to: Date.today)
+rating = ratings.sample
+genre = Faker::Game.genre
+console = Faker::Game.platform
+
+Game.create({
+  title: title,
+  created_at: rel_date,
+  rating: rating,
+  genre: genre,
+  console: console 
+})
+
+end
