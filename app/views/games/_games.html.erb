@@ -1,0 +1,8 @@
+<% games.each do |game| %>
+  <div class="game-card">
+    <p><%= game.title %></p>
+    <p><%= game.console %></p>
+    <date><%= game.created_at.to_s(:short) %></date>
+  </div>
+
+<% end %>

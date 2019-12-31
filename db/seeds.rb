@@ -11,7 +11,7 @@
 # Need title, release date, rating, console, created_at random ish time
 # Placeholder image from internet https://videogamelaw.sites.olt.ubc.ca/files/2014/08/icon_12678.png
 require 'faker'
-
+#require '../app/helpers/application_helper.rb'
 ratings = %w(Everyone Teen Mature Adult)
 10.times do |number|
 # Make a game

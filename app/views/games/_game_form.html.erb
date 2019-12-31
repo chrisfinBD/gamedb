@@ -1,0 +1,23 @@
+<p>
+
+ <%= form_thing.label(:title) %>
+ <%= form_thing.text_field(:title) %>
+ <br/>
+ <%= form_thing.label(:console) %>
+ <%= form_thing.select :console, options_for_select(@consoles) %>
+ <br/>
+
+ <%= form_thing.label(:rating) %>
+ <%= form_thing.select :rating, options_for_select(@ratings) %>
+ <br/>
+
+ <%= form_thing.label(:genre) %>
+ <%= form_thing.select :genre, options_for_select(@genres) %>
+ <br/>
+
+  <%= form_thing.label(:created_at) %>
+  <%= form_thing.date_select :created_at %>
+  <br/>
+
+
+</p>

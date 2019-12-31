@@ -1,0 +1,10 @@
+<% @games.each do |game| %>
+  <p> 
+  <%= render("games", form_thing: f) %>
+  <br />
+  <%= link_to("edit", edit_game_path(game.id)) %>
+  -
+  <%= link_to("delete", game_path(game.id), method: :delete, data: {confirm: "Are you sure you want to delete #{game.id}?"}) %>
+  </p>
+  <hr />
+<% end %>
