@@ -23,6 +23,9 @@ class GamesController < ApplicationController
   end
 
   def edit
+    @consoles = consoles
+    @ratings = %w(Everyone Teen Mature Adult)
+    @genres = genres 
     @game = Game.find(params[:id])
   end
 

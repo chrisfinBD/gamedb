@@ -1,10 +1,33 @@
+<h1>Games</h1>
+
+<table>                         
+  <tr>
+    <th></th>                    
+    <th>Title</th>
+    <th>Console</th>
+    <th>Release Date <br/>(YYYY-MM-DD) </th>
+  </tr>
+
 <% @games.each do |game| %>
-  <p> 
-  <%= render("games", form_thing: f) %>
-  <br />
-  <%= link_to("edit", edit_game_path(game.id)) %>
-  -
-  <%= link_to("delete", game_path(game.id), method: :delete, data: {confirm: "Are you sure you want to delete #{game.id}?"}) %>
-  </p>
-  <hr />
+  <tr>
+    <td>
+      <img src="icon_12678.png" height="42" width="42">
+    </td>
+    <td>
+      <%= game.title%>
+    </td>  
+    <td>
+      <%= game.console%>
+    </td>  
+    <td>
+      <%= game.created_at.strftime("%F") %>
+    </td>  
+    <td>
+      <%= link_to("Edit", edit_game_path(game.id)) %>
+    </td>
+    <td>
+      <%= link_to("Delete", game_path(game.id), method: :delete, data: {confirm: "Are you sure you want to delete #{game.title}?"}) %>
+    </td>
+  </tr>
 <% end %>
+</table> 

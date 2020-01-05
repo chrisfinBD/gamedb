@@ -1,18 +1,20 @@
+<h1>Editting '<%= @game.title %>' </h1>
+
 <p>
 
  <%= form_thing.label(:title) %>
  <%= form_thing.text_field(:title) %>
  <br/>
  <%= form_thing.label(:console) %>
- <%= form_thing.select :console, options_for_select(@consoles) %>
+ <%= form_thing.select :console, options_for_select(@consoles, @game.console) %>
  <br/>
 
  <%= form_thing.label(:rating) %>
- <%= form_thing.select :rating, options_for_select(@ratings) %>
+ <%= form_thing.select :rating, options_for_select(@ratings, @game.rating) %>
  <br/>
 
  <%= form_thing.label(:genre) %>
- <%= form_thing.select :genre, options_for_select(@genres) %>
+ <%= form_thing.select :genre, options_for_select(@genres, @game.genre) %>
  <br/>
 
   <%= form_thing.label(:created_at) %>

@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Gamedb</title>
+    <title>IGDB</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <%= render("shared/search_form") %>
+      <nav>
+        <%= link_to("Home", root_path) %>
+        <%= link_to("Add New", new_game_path) %>
+        <%= link_to("Show All", games_path) %>
+    </nav>
   </head>
 
   <body>
+      
     <%= yield %>
   </body>
 </html>

@@ -13,7 +13,7 @@
 require 'faker'
 #require '../app/helpers/application_helper.rb'
 ratings = %w(Everyone Teen Mature Adult)
-10.times do |number|
+100.times do |number|
 # Make a game
 title = Faker::Game.title
 rel_date = Faker::Date.between(from: 50.years.ago, to: Date.today)
